@@ -43,15 +43,15 @@ const App = () => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
+      const currentScrollPos = window.scrollY;
+      if (currentScrollPos > 100) {
+        setVisible(true);
       } else {
-        setScrolled(false);
+        setVisible(false);
       }
     };
 
@@ -66,12 +66,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-100 text-gray-800 shadow-md sticky top-0 z-50 transition-all duration-300">
-      <div className={`container mx-auto px-4 ${scrolled ? 'py-1' : 'py-3'} flex justify-between items-center transition-all duration-300`}>
+    <nav className={`bg-gray-100 text-gray-800 shadow-md fixed top-0 w-full z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <div className="text-left">
-            <div className={`${scrolled ? 'text-sm' : 'text-md'} font-bold leading-tight transition-all duration-300`}>Lozells</div>
-            <div className={`${scrolled ? 'text-sm' : 'text-md'} font-bold transition-all duration-300`}>Community Forum</div>
+            <div className="text-md font-bold leading-tight">Lozells</div>
+            <div className="text-md font-bold">Community Forum</div>
           </div>
         </div>
         <div className="hidden md:flex space-x-6">
@@ -110,7 +110,7 @@ const AboutPreviewSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 md:pr-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-700 mb-4">Who We Are</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-700 mb-4">Lozells Community Forum</h2>
             <p className="text-gray-700 text-base md:text-lg">
               The Lozells Community Forum is a local initiative led by dedicated community members, including your local councillor, to address the needs and improve the quality of life in our neighborhood.
             </p>

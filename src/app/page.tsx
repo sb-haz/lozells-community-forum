@@ -66,18 +66,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-slate-700 text-white shadow-md sticky top-0 z-50 transition-all duration-300">
+    <nav className="bg-gray-100 text-gray-800 shadow-md sticky top-0 z-50 transition-all duration-300">
       <div className={`container mx-auto px-4 ${scrolled ? 'py-1' : 'py-3'} flex justify-between items-center transition-all duration-300`}>
         <div className="flex items-center">
           <div className="text-left">
-            <div className={`${scrolled ? 'text-xl' : 'text-2xl'} font-bold leading-tight transition-all duration-300`}>Lozells</div>
-            <div className={`${scrolled ? 'text-xs' : 'text-sm'} font-bold transition-all duration-300`}>Community Forum</div>
+            <div className={`${scrolled ? 'text-sm' : 'text-md'} font-bold leading-tight transition-all duration-300`}>Lozells</div>
+            <div className={`${scrolled ? 'text-sm' : 'text-md'} font-bold transition-all duration-300`}>Community Forum</div>
           </div>
         </div>
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="text-gray-200 hover:text-white transition">Home</Link>
-          <Link href="/events" className="text-gray-200 hover:text-white transition">Events</Link>
-          <Link href="/contact" className="text-gray-200 hover:text-white transition">Contact</Link>
+          <Link href="/" className="text-gray-700 hover:text-gray-900 transition">Home</Link>
+          <Link href="/events" className="text-gray-700 hover:text-gray-900 transition">Events</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition">Contact</Link>
         </div>
         <button className="md:hidden" onClick={toggleMenu}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,10 +86,10 @@ const Navbar = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-700 px-4 py-2 absolute w-full shadow-md">
-          <Link href="/" className="block py-2 text-gray-200 hover:text-white transition">Home</Link>
-          <Link href="/events" className="block py-2 text-gray-200 hover:text-white transition">Events</Link>
-          <Link href="/contact" className="block py-2 text-gray-200 hover:text-white transition">Contact</Link>
+        <div className="md:hidden bg-gray-100 px-4 py-2 absolute w-full shadow-md">
+          <Link href="/" className="block py-2 text-gray-700 hover:text-gray-900 transition">Home</Link>
+          <Link href="/events" className="block py-2 text-gray-700 hover:text-gray-900 transition">Events</Link>
+          <Link href="/contact" className="block py-2 text-gray-700 hover:text-gray-900 transition">Contact</Link>
         </div>
       )}
     </nav>

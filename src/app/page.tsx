@@ -129,19 +129,25 @@ const FeaturedSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-400 flex items-center justify-center">
-              <img src="news.png" alt="" />
+            <div className="bg-gray-400 flex items-center justify-center">
+              <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/opU7jqbCOxg?si=CjYB_u5E8mBqQJtH" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              ></iframe>
             </div>
             <div className="p-6">
               <div className="flex items-center mb-2">
                 <Award className="h-5 w-5 text-slate-600 mr-2" />
                 <span className="text-slate-600 font-medium">Community Initiative</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Featured on Channel S News</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Featured on UK NEWS TIME</h3>
               <p className="text-gray-600 mb-4">Our community efforts were recently featured on local news, highlighting our dedication to improving the Lozells area.</p>
-              <a href="/news" className="inline-flex items-center text-slate-700 font-medium">
-                Read more <ChevronRight className="h-4 w-4 ml-1" />
-              </a>
             </div>
           </div>
 

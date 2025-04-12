@@ -43,35 +43,18 @@ const App = () => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (currentScrollPos > 100) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`bg-gray-100 text-gray-800 shadow-md fixed top-0 w-full z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className="bg-gray-200 text-gray-800 shadow-md w-full z-50">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <div className="text-left">
-            <div className="text-md font-bold leading-tight">Lozells</div>
-            <div className="text-md font-bold">Community Forum</div>
+            <div className="text-xl font-bold leading-tight">Lozells</div>
+            <div className="text-lg font-bold">Community Forum</div>
           </div>
         </div>
         <div className="hidden md:flex space-x-6">
@@ -86,7 +69,7 @@ const Navbar = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-100 px-4 py-2 absolute w-full shadow-md">
+        <div className="md:hidden bg-gray-100 px-4 py-2 w-full shadow-md">
           <Link href="/" className="block py-2 text-gray-700 hover:text-gray-900 transition">Home</Link>
           <Link href="/events" className="block py-2 text-gray-700 hover:text-gray-900 transition">Events</Link>
           <Link href="/contact" className="block py-2 text-gray-700 hover:text-gray-900 transition">Contact</Link>
@@ -106,13 +89,12 @@ const HeroSection = () => {
 
 const AboutPreviewSection = () => {
   return (
-    <div className="py-8 md:py-12 bg-gray-50">
+    <div className="py-8 md:py-12 bg-gray-100">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 md:pr-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-700 mb-4">Lozells Community Forum</h2>
             <p className="text-gray-700 text-base md:text-lg">
-              The Lozells Community Forum is a local initiative led by dedicated community members, including your local councillor, to address the needs and improve the quality of life in our neighborhood.
+              The Lozells Community Forum is a local initiative led by dedicated community members, to address the needs and improve the quality of life in our neighborhood.
             </p>
           </div>
         </div>
@@ -130,14 +112,14 @@ const FeaturedSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
             <div className="bg-gray-400 flex items-center justify-center">
-              <iframe 
-                width="100%" 
-                height="315" 
-                src="https://www.youtube.com/embed/opU7jqbCOxg?si=CjYB_u5E8mBqQJtH" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/opU7jqbCOxg?si=CjYB_u5E8mBqQJtH"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
             </div>

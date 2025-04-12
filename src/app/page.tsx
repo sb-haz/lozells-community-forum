@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-50 text-gray-800 shadow-md w-full z-50">
+    <nav className="bg-white text-gray-800 shadow-md w-full z-50">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <div className="text-left">
@@ -69,7 +69,7 @@ const Navbar = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-50 px-4 py-2 w-full shadow-md">
+        <div className="md:hidden bg-white px-4 py-2 w-full shadow-md">
           <Link href="/" className="block py-2 text-gray-700 hover:text-gray-900 transition">Home</Link>
           <Link href="/events" className="block py-2 text-gray-700 hover:text-gray-900 transition">Events</Link>
           <Link href="/contact" className="block py-2 text-gray-700 hover:text-gray-900 transition">Contact</Link>

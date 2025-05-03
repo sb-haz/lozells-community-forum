@@ -36,7 +36,7 @@ const FeaturedSection: React.FC = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-3xl font-bold text-slate-700 mb-8 text-center">Featured Highlights</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
             <div className="bg-gray-400 flex items-center justify-center">
               <iframe
@@ -57,6 +57,41 @@ const FeaturedSection: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Featured on UK NEWS TIME</h3>
               <p className="text-gray-600 mb-4">Our community efforts were recently featured on local news, highlighting our dedication to improving the Lozells area.</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center mb-2">
+                <Calendar className="h-5 w-5 text-slate-600 mr-2" />
+                <span className="text-slate-600 font-medium">Recent Event</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Building Bridges Event</h3>
+              <p className="text-gray-600 mb-4">A powerful event focused on strengthening relationships with the Muslim community, promoting understanding, and celebrating our rich diversity.</p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-1 p-2">
+              <div className="h-24 bg-gray-400 flex items-center justify-center">
+                <img src="/building1.jpeg" alt="Building Bridges event" className="h-full w-full object-cover" />
+              </div>
+              <div className="h-24 bg-gray-400 flex items-center justify-center">
+                <img src="/building2.jpeg" alt="Building Bridges event" className="h-full w-full object-cover" />
+              </div>
+              <div className="h-24 bg-gray-400 flex items-center justify-center">
+                <img src="/building3.jpeg" alt="Building Bridges event" className="h-full w-full object-cover" />
+              </div>
+              <div className="h-24 bg-gray-400 col-span-2 flex items-center justify-center">
+                <img src="/building4.jpeg" alt="Building Bridges event" className="h-full w-full object-cover" />
+              </div>
+              <div className="h-24 bg-gray-400 flex items-center justify-center">
+                <img src="/building5.jpeg" alt="Building Bridges event" className="h-full w-full object-cover" />
+              </div>
+            </div>
+
+            <div className="p-4">
+              <Link href="/events" className="inline-flex items-center text-slate-700 font-medium">
+                See event details <ChevronRight className="h-4 w-4 ml-1" />
+              </Link>
             </div>
           </div>
 
@@ -150,7 +185,7 @@ const TeamSection: React.FC = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
             <div className="md:flex">
               <div className="md:w-1/2">
-                <img src="/iftaar5.png" alt="Lozells Community Forum Team" className="w-full h-full object-cover" />
+                <img src="/building5.jpeg" alt="Lozells Community Forum Team" className="w-full h-full object-cover" />
               </div>
               <div className="md:w-1/2 p-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Meet Our Team</h3>
